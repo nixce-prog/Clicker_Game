@@ -1,5 +1,6 @@
-    from tkinter import *
+from tkinter import *
 from random import *
+import time
 
 root = Tk()
 root.title('Кликалка')
@@ -40,6 +41,9 @@ def vivodd():
     wind2.geometry('300x400')
     wind2['bg'] = 'blue'
 
+    def vivod():
+        LabelText3.configure(text='Недоступно!')
+
     LabelText2 = Label(wind2,
                        text='Вывод средств на:',
                        font=('Comic Sens MS', 13),
@@ -52,10 +56,29 @@ def vivodd():
     cbtn = Button(wind2,
                   text='Карточка',
                   font=('Comic Sans MS', 10),
+                  command=vivod,
                   bg='blue',
                   fg='white'
                   )
-    cbtn.place(x=40, y=40)
+    cbtn.place(x=40, y=100)
+
+    ctbtn = Button(wind2,
+                   text='Крипта',
+                   font=('Comic Sans MS', 10),
+                   command=vivod,
+                   bg='blue',
+                   fg='white'
+                   )
+    ctbtn.place(x=200, y=100)
+
+    LabelText3 = Label(wind2,
+                       text=' ',
+                       font=('Comic Sens MS', 15),
+                       bg='blue',
+                       fg='red'
+                       )
+    LabelText3.place(x=100, y=50)
+
     wind2.mainloop()
 
 
